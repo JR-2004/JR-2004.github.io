@@ -13,5 +13,13 @@
         <a class="button" href="/index">Terug naar de startpagina</a>
         <a class="button" href="/files/voertuigoverzichten/brandweer">Overzicht Brandweer</a>
         <a class="button" href="/files/voertuigoverzichten/ambulance">Overzicht Ambulance</a>
+    <footer id="footer">
+        &copy; <span id="year"></span> JR-2004. Alle rechten voorbehouden. Gebruik van onderdelen vanaf deze site is zonder schriftelijke toestemming verboden.
+    </footer>
+    <script>
+        
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+    </script>
 </body>
 </html>
