@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoertuigOverzicht Brandweer</title>
     <link rel="stylesheet" href="../../styles.css">
-        <style>
+    <style>
+        .button-container {
+            margin-bottom: 20px; /* Voeg wat ruimte toe onder de knop-container */
+        }
         .button {
             display: inline-block;
             padding: 5px 10px; /* Verklein de padding */
@@ -15,18 +18,18 @@
             text-decoration: none;
             border-radius: 5px;
         }
-
         .button:hover {
             background-color: #0056b3; /* Donkerdere kleur bij hover */
         }
-        </style>
+    </style>
 </head>
 <body>
     <h1>Brandweervoertuigen</h1>
     <p>Hier vind u een overzicht van alle brandweervoertuigen van Nederland</p>
 
     <div class="button-container">
-        <a class="button" href="../../index">Terug naar de startpagina</a>
+        <a class="button" href="../../index.html">Terug naar de startpagina</a>
+    </div>
 
     <!-- Google Spreadsheet insluiten -->
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSiyRnUzu2Ms4s49_u110eT1H9-2r2LvgPsmRE148fS_m793N4W4IAOhk00KkDn359EoutyKUcYr7YP/pubhtml" width="100%" height="600"></iframe>
