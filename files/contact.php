@@ -3,6 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verkrijg de ingediende gegevens van het formulier
     $name = $_POST["name"];
+    $email = $_POST["email"];
     $message = $_POST["message"];
 
     // Verzend de e-mail
