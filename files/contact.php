@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mail($to, $subject, $body);
 
     // Redirect naar een bedankpagina
-    header("Location: bedankt.html");
+    header("Location: /files/bedankt.html");
     exit();
 }
 ?>
