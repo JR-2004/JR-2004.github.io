@@ -75,3 +75,16 @@ footer {
     padding: 10px 0;
     border-top: 1px solid #e1e1e1;
 }
+.button {
+    display: inline-block;
+    padding: 5px 10px; /* Verklein de padding */
+    font-size: 14px; /* Verklein het lettertype */
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Donkerdere kleur bij hover */
+}
