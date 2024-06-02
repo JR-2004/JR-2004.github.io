@@ -14,8 +14,13 @@
         <a class="button" href="files/meldkamerspel">Meldkamerspel</a>
         <a class="button" href="files/voertuigoverzichten">VoertuigOverzichten</a>
     </div>
-    <footer>
-        &copy; 2024 JR-2004. Alle rechten voorbehouden. Gebruik van onderdelen vanaf deze site is zonder schriftelijke toestemming verboden.
+    <footer id="footer">
+        &copy; <span id="year"></span> JR-2004. Alle rechten voorbehouden. Gebruik van onderdelen vanaf deze site is zonder schriftelijke toestemming verboden.
     </footer>
+    <script>
+        
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+    </script>
 </body>
 </html>
