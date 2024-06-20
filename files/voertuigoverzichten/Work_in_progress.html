@@ -1,1 +1,101 @@
 
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamische Tabel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamische Tabel</h1>
+    <label for="rows">Aantal rijen:</label>
+    <input type="number" id="rows" name="rows" min="1" value="50">
+    <button onclick="generateTable()">Genereer Tabel</button>
+    <table id="dynamicTable">
+        <thead>
+            <tr>
+                <th>Postnaam</th>
+                <th>Adres / Roepnummer</th>
+                <th>Type Voertuig</th>
+                <th>Type Voertuig</th>
+                <th>Kenteken</th>
+                <th>Bijzonderheden</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamische rijen worden hier toegevoegd -->
+        </tbody>
+    </table>
+
+    <footer>
+        &copy; <span id="year"></span> JR-2004. Alle rechten voorbehouden. Gebruik van onderdelen vanaf deze site is zonder schriftelijke toestemming verboden.
+    </footer>
+    
+    <script>
+        // JavaScript om het jaartal dynamisch in te voegen
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+
+        function generateTable() {
+            const rowCount = document.getElementById('rows').value;
+            const tbody = document.getElementById('dynamicTable').getElementsByTagName('tbody')[0];
+
+            // Clear existing rows
+            tbody.innerHTML = '';
+
+            for (let i = 0; i < rowCount; i++) {
+                const row = document.createElement('tr');
+
+                for (let j = 0; j < 6; j++) {
+                    const cell = document.createElement('td');
+                    cell.contentEditable = true; // Make cells editable
+                    row.appendChild(cell);
+                }
+
+                tbody.appendChild(row);
+            }
+        }
+
+        // Generate initial table with 50 rows
+        document.getElementById('rows').value = 50;
+        generateTable();
+    </script>
+</body>
+</html>
