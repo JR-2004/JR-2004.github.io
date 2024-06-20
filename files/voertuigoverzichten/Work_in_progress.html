@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -26,29 +25,15 @@
         th {
             background-color: #f2f2f2;
         }
-        input, button {
-            padding: 10px;
-            margin: 5px 0;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
+        footer {
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <h1>Dynamische Tabel</h1>
-    <label for="rows">Aantal rijen:</label>
-    <input type="number" id="rows" name="rows" min="1" value="50">
-    <button onclick="generateTable()">Genereer Tabel</button>
-    <table id="dynamicTable">
+    <table>
         <thead>
             <tr>
                 <th>Postnaam</th>
@@ -60,7 +45,60 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Dynamische rijen worden hier toegevoegd -->
+            <tr>
+                <td>Post 1</td>
+                <td>Adres 1</td>
+                <td>Type 1</td>
+                <td>Type 1</td>
+                <td>Kenteken 1</td>
+                <td>Bijzonderheden 1</td>
+            </tr>
+            <tr>
+                <td>Post 2</td>
+                <td>Adres 2</td>
+                <td>Type 2</td>
+                <td>Type 2</td>
+                <td>Kenteken 2</td>
+                <td>Bijzonderheden 2</td>
+            </tr>
+            <!-- Voeg hier meer rijen toe tot je 50 rijen hebt -->
+            <!-- Voorbeeld rijen toegevoegd tot rij 5 -->
+            <tr>
+                <td>Post 3</td>
+                <td>Adres 3</td>
+                <td>Type 3</td>
+                <td>Type 3</td>
+                <td>Kenteken 3</td>
+                <td>Bijzonderheden 3</td>
+            </tr>
+            <tr>
+                <td>Post 4</td>
+                <td>Adres 4</td>
+                <td>Type 4</td>
+                <td>Type 4</td>
+                <td>Kenteken 4</td>
+                <td>Bijzonderheden 4</td>
+            </tr>
+            <tr>
+                <td>Post 5</td>
+                <td>Adres 5</td>
+                <td>Type 5</td>
+                <td>Type 5</td>
+                <td>Kenteken 5</td>
+                <td>Bijzonderheden 5</td>
+            </tr>
+            <!-- Voeg meer rijen toe om het totaal op 50 te brengen -->
+            <!-- Template voor snelle kopie-paste -->
+            <!--
+            <tr>
+                <td>Post n</td>
+                <td>Adres n</td>
+                <td>Type n</td>
+                <td>Type n</td>
+                <td>Kenteken n</td>
+                <td>Bijzonderheden n</td>
+            </tr>
+            -->
         </tbody>
     </table>
 
@@ -72,30 +110,6 @@
         // JavaScript om het jaartal dynamisch in te voegen
         const currentYear = new Date().getFullYear();
         document.getElementById('year').textContent = currentYear;
-
-        function generateTable() {
-            const rowCount = document.getElementById('rows').value;
-            const tbody = document.getElementById('dynamicTable').getElementsByTagName('tbody')[0];
-
-            // Clear existing rows
-            tbody.innerHTML = '';
-
-            for (let i = 0; i < rowCount; i++) {
-                const row = document.createElement('tr');
-
-                for (let j = 0; j < 6; j++) {
-                    const cell = document.createElement('td');
-                    cell.contentEditable = true; // Make cells editable
-                    row.appendChild(cell);
-                }
-
-                tbody.appendChild(row);
-            }
-        }
-
-        // Generate initial table with 50 rows
-        document.getElementById('rows').value = 50;
-        generateTable();
     </script>
 </body>
 </html>
