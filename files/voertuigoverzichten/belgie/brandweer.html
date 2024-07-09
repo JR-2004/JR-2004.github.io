@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voertuigoverzicht Brandweer België</title>
+    <link rel="stylesheet" href="../../../styles.css">
+    <style>
+        .button-container {
+            margin-bottom: 20px; 
+        }
+        .button {
+            display: inline-block;
+            padding: 5px 10px; 
+            font-size: 14px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3; 
+        }
+       .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a class="button" href="/index">VoertuigOverzichten</a>
+        <a class="button" href="/files/contact">Contact</a>
+    </div>
+    
+    <h1>Ambulancevoertuigen</h1>
+    <p>Hier vind u een overzicht van alle brandweervoertuigen van België. Let op: het laden van het overzicht kan enkele seconden duren. Wilt u een wijziging indienen, klik dan hierboven op Contact.</p>
+
+<div class="image-container">
+        <img src="/files/images/under-construction.jpg" alt="Under Construction">
+</div>
+    <footer id="footer">
+        &copy; <span id="year"></span> JR-2004. Alle rechten voorbehouden. Gebruik van onderdelen vanaf deze site is zonder schriftelijke toestemming verboden.
+    </footer>
+    <script>
+        
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+    </script>
+</body>
+</html>
